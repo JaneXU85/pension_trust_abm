@@ -62,7 +62,7 @@ MIT License. See LICENSE for details.
 (Will be updated after Zenodo deposit)
 =======
 
->>>>>>> 7a69092767af1f42a6cf4eae8254fe68ccaf263d
+
 
 5. **保存**（Ctrl + S），关闭。
 
@@ -81,3 +81,27 @@ numpy>=1.21.0
 scipy>=1.9.0
 seaborn>=0.12.0
 matplotlib>=3.6.0
+
+This repository implements an agent-based model (ABM) of institutional trust in pension systems, with a focus on negative spillover effects. The model has been extended to support partial spillover intensity, revealing multi-regime dynamics in trust collapse.
+📘 Full model specification: See the ODD protocol (v2 – with partial spillover).
+📊 Key results: Three distinct regimes emerge based on spillover intensity:
+No spillover (spillover_fraction = 0.0) → high-trust equilibrium
+Partial spillover (spillover_fraction = 0.5) → near-total collapse
+Full spillover (spillover_fraction = 1.0) → complete system failure
+Crucially, long-term outcomes are independent of initial trust levels.
+
+🚀 How to Reproduce Results
+Install dependencies:
+
+pip install mesa pandas numpy seaborn matplotlib
+Run the extended experiment (270 simulations):
+
+python run_extended_experiment.py
+Output: extended_experiment_all_runs.csv
+Generate figures:
+
+python plot_extended_results.py
+Outputs:
+fig1_extended_trust_boxplot.png
+fig2_phase_transition.png
+fig3_trust_heatmap.png

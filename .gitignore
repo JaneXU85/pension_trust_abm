@@ -1,0 +1,19 @@
+#Python
+_pycacha_/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+#Jupyter Notebook
+.ipynb_checkpoints/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*~
