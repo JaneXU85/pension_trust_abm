@@ -57,7 +57,7 @@ Code available at: https://github.com/yourusername/trust_abm
 📄 License
 MIT License. See LICENSE for details.
 🔗 Data DOI
-![DOI](https://zenodo.org/badge/XXXXXX.svg)
+[![DOI](https://zenodo.org/badge/1155171850.svg)](https://doi.org/10.5281/zenodo.18605927)
 (Will be updated after Zenodo deposit)
 
 5. **保存**（Ctrl + S），关闭。
