@@ -1,78 +1,35 @@
-"""
-Extended experiment script for Pension Trust ABM with partial spillover.
-Runs simulations across:
-  - 3 initial trust levels: 0.3, 0.6, 0.9
-  - 3 spillover conditions: Off (0.0), Partial (0.5), Full (1.0)
-  - 30 replications per condition
-
-Total runs: 3 × 3 × 30 = 270
-Outputs: extended_experiment_all_runs.csv
-"""
-
-from model import PensionTrustModel
+# run_extended_experiment.py
+import os
 import pandas as pd
-import numpy as np
+from model import PensionTrustModel
 
-# ----------------------------
-# Configuration
-# ----------------------------
-INITIAL_TRUST_VALUES = [0.3, 0.6, 0.9]
-SPILLOVER_CONDITIONS = [
-    {"enabled": False, "fraction": 0.0, "label": "No Spillover"},
-    {"enabled": True,  "fraction": 0.5, "label": "Partial Spillover"},
-    {"enabled": True,  "fraction": 1.0, "label": "Full Spillover"},
-]
-REPLICATIONS = 30
-NUM_STEPS = 50
-SEED_BASE = 42  # For reproducibility
-
-# ----------------------------
-# Run experiments
-# ----------------------------
+os.makedirs("data", exist_ok=True)
 results = []
 
-print("🚀 Starting extended experiment (270 runs)...")
-run_id = 0
-
-for init_trust in INITIAL_TRUST_VALUES:
-    for sp_cond in SPILLOVER_CONDITIONS:
-        for rep in range(REPLICATIONS):
-            run_id += 1
-            seed = SEED_BASE + run_id  # Unique seed per run
-            
+for sp_frac in [0.0, 0.5, 1.0]:
+    for init_trust in [0.3, 0.6, 0.9]:
+        for rep in range(30):
             model = PensionTrustModel(
                 num_citizens=100,
                 num_brokers=5,
                 initial_trust=init_trust,
-                spillover_enabled=sp_cond["enabled"],
-                spillover_fraction=sp_cond["fraction"],
-                seed=seed
+                spillover_enabled=(sp_frac > 0),
+                spillover_fraction=sp_frac,
+                seed=rep + int(sp_frac * 1000) + int(init_trust * 100)
             )
-            
-            model.run_model(n_steps=NUM_STEPS)
+            # 手动运行50步
+            for _ in range(50):
+                model.step()
+            # 获取最终数据
             data = model.datacollector.get_model_vars_dataframe()
-            
+            last = data.iloc[-1]
             results.append({
-                "replication_id": run_id,
+                "spillover_fraction": sp_frac,
                 "initial_trust": init_trust,
-                "spillover_enabled": sp_cond["enabled"],
-                "spillover_fraction": sp_cond["fraction"],
-                "spillover_label": sp_cond["label"],
-                "final_trust": data["FinalTrust"].iloc[-1],
-                "final_cooperation": data["FinalCooperation"].iloc[-1]
+                "final_trust": last["Avg_Trust"],
+                "participation_rate": last["Participation_Rate"]
             })
-            
-            if run_id % 30 == 0:
-                print(f"✅ Completed {run_id}/270 runs")
 
-# ----------------------------
-# Save to CSV
-# ----------------------------
 df = pd.DataFrame(results)
-df.to_csv("extended_experiment_all_runs.csv", index=False)
-
-print("\n🎉 All runs completed!")
-print(f"📊 Data saved to 'extended_experiment_all_runs.csv'")
-print("\nSummary by condition:")
-summary = df.groupby(["spillover_label", "initial_trust"])[["final_trust", "final_cooperation"]].agg(["mean", "std"])
-print(summary.round(4))
+df.to_csv("data/extended_experiment_all_runs.csv", index=False)
+print("✅ Done! File saved to data/extended_experiment_all_runs.csv")

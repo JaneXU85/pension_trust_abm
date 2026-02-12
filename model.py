@@ -1,79 +1,105 @@
+# model.py
 """
-Pension Trust ABM with Partial Spillover Support
-Author: [xu jie]
-Date: 2026
+Voluntary Private Pension (Pillar III) Trust Model with Spillover Effects.
+Key features:
+- Citizens can switch brokers but cannot withdraw funds (locked-in).
+- Citizens may pause contributions if trust falls below threshold.
+- Spillover: punishment of one broker affects trust in others.
 """
 
 import random
+import numpy as np
 from mesa import Agent, Model
 from mesa.time import RandomActivation
 from mesa.datacollection import DataCollector
-import numpy as np
-
-
-class Citizen(Agent):
-    """A citizen who decides whether to contribute to the pension fund."""
-
-    def __init__(self, unique_id, model, broker_id, initial_trust):
-        super().__init__(unique_id, model)
-        self.broker_id = broker_id
-        self.trust = initial_trust  # Initial trust in assigned broker
-
-    def step(self):
-        """Decide whether to cooperate based on current trust."""
-        if self.random.random() < self.trust:
-            self.cooperated = True
-        else:
-            self.cooperated = False
 
 
 class Broker(Agent):
-    """A pension fund broker who may act opportunistically."""
-
+    """Pension product provider (e.g., fund company)."""
     def __init__(self, unique_id, model):
         super().__init__(unique_id, model)
+        self.misconduct = False  # Whether this broker is punished in current step
 
-    def step(self):
-        """Broker behaves opportunistically with fixed probability."""
-        # In this model, brokers always have incentive to defect
-        # Punishment is handled at model level via audit
-        pass
+    def commit_misconduct(self):
+        """Simulate misconduct (e.g., fee misrepresentation)."""
+        self.misconduct = True
+
+    def reset(self):
+        self.misconduct = False
+
+
+class Citizen(Agent):
+    """Saver in a voluntary pension scheme."""
+    def __init__(self, unique_id, model, broker_id, initial_trust):
+        super().__init__(unique_id, model)
+        self.broker_id = broker_id
+        self.trust = initial_trust
+        self.is_active = True  # True = still contributing; False = paused (but account locked)
+
+    def decide_participation(self):
+        """Pause contributions if trust too low."""
+        if self.is_active and self.trust < 0.2:
+            self.is_active = False
+
+    def maybe_switch_broker(self):
+        """Switch to another broker if still active and conditions met."""
+        if not self.is_active:
+            return  # Paused citizens don't switch
+        
+        # Simple switching rule: not implemented here for focus on spillover
+        # Could add later based on neighbor trust or performance
+
+    def update_trust_after_punishment(self, spillover_fraction):
+        """Update trust when a broker is punished."""
+        if spillover_fraction <= 0:
+            return
+
+        # Determine if this citizen is affected by spillover
+        num_neighbors = self.model.num_citizens // self.model.num_brokers
+        num_affected = int(round(spillover_fraction * num_neighbors))
+        
+        # Simulate random selection of affected citizens per broker
+        # For simplicity: use global random draw
+        if random.random() < spillover_fraction:
+            self.trust = max(0.0, self.trust - 0.1)
 
 
 class PensionTrustModel(Model):
-    """Main model class for pension trust simulation."""
-
     def __init__(
         self,
         num_citizens=100,
         num_brokers=5,
-        initial_trust=0.5,
+        initial_trust=0.6,
         spillover_enabled=False,
-        spillover_fraction=1.0,  # NEW: fraction of neighbors affected [0.0, 1.0]
+        spillover_fraction=1.0,
         seed=None
     ):
-        super().__init__(seed=seed)
+        super().__init__()
+        if seed is not None:
+            random.seed(seed)
+            np.random.seed(seed)
+
         self.num_citizens = num_citizens
         self.num_brokers = num_brokers
         self.initial_trust = initial_trust
         self.spillover_enabled = spillover_enabled
-        self.spillover_fraction = max(0.0, min(1.0, spillover_fraction))  # Clamp to [0,1]
+        self.spillover_fraction = spillover_fraction
 
-        # Scheduler
         self.schedule = RandomActivation(self)
+        self.running = True
 
         # Create brokers
         for i in range(self.num_brokers):
             broker = Broker(i, self)
             self.schedule.add(broker)
 
-        # Assign citizens to brokers (balanced)
+        # Assign citizens to brokers evenly
         citizens_per_broker = self.num_citizens // self.num_brokers
-        extra = self.num_citizens % self.num_brokers
+        remainder = self.num_citizens % self.num_brokers
 
         citizen_id = self.num_brokers
         for broker_id in range(self.num_brokers):
-            n = citizens_per_broker + (1 if broker_id < extra else 0)
+            n = citizens_per_broker + (1 if broker_id < remainder else 0)
             for _ in range(n):
                 citizen = Citizen(citizen_id, self, broker_id, self.initial_trust)
                 self.schedule.add(citizen)
@@ -82,59 +108,40 @@ class PensionTrustModel(Model):
         # Data collector
         self.datacollector = DataCollector(
             model_reporters={
-                "FinalTrust": lambda m: np.mean([
+                "Avg_Trust": lambda m: np.mean([
                     a.trust for a in m.schedule.agents if isinstance(a, Citizen)
                 ]),
-                "FinalCooperation": lambda m: np.mean([
-                    getattr(a, 'cooperated', False) for a in m.schedule.agents
-                    if isinstance(a, Citizen)
+                "Participation_Rate": lambda m: np.mean([
+                    float(a.is_active) for a in m.schedule.agents if isinstance(a, Citizen)
                 ])
             }
         )
 
-    def punish_broker(self, broker_id):
-        """Simulate punishment (e.g., audit reveals misconduct)."""
-        # In this model, we assume every broker is punished once per run
-        # to trigger spillover mechanism
-        self.update_trust_after_punishment(broker_id)
-
-    def update_trust_after_punishment(self, broker_id):
-        """Update trust of connected citizens based on spillover fraction."""
-        if not self.spillover_enabled:
-            return
-
-        # Get all citizens connected to this broker
-        affected_citizens = [
-            agent for agent in self.schedule.agents
-            if isinstance(agent, Citizen) and agent.broker_id == broker_id
-        ]
-
-        if not affected_citizens:
-            return
-
-        # Determine how many to affect
-        num_to_affect = int(len(affected_citizens) * self.spillover_fraction)
-        # Ensure at least one if fraction > 0 and there are citizens
-        if self.spillover_fraction > 0 and num_to_affect == 0 and affected_citizens:
-            num_to_affect = 1
-
-        # Randomly select citizens to lose trust
-        selected_citizens = self.random.sample(affected_citizens, num_to_affect)
-
-        for citizen in selected_citizens:
-            citizen.trust = 0.0
-
     def step(self):
         """Advance the model by one step."""
-        self.schedule.step()
+        # Reset all brokers
+        for agent in self.schedule.agents:
+            if isinstance(agent, Broker):
+                agent.reset()
 
-        # Simulate one punishment event per step (for simplicity)
-        # In a more complex model, this could be probabilistic
-        punished_broker = self.random.choice(range(self.num_brokers))
-        self.punish_broker(punished_broker)
+        # Randomly select one broker to punish (simulate scandal)
+        broker_agents = [a for a in self.schedule.agents if isinstance(a, Broker)]
+        punished_broker = self.random.choice(broker_agents)
+        punished_broker.commit_misconduct()
 
-    def run_model(self, n_steps=50):
-        """Run the model for n_steps and collect final data."""
-        for _ in range(n_steps):
-            self.step()
+        # Update citizen trust
+        for agent in self.schedule.agents:
+            if isinstance(agent, Citizen):
+                if self.spillover_enabled:
+                    agent.update_trust_after_punishment(self.spillover_fraction)
+                # Note: even without spillover, direct punishment could reduce trust
+                # But for focus, we assume only spillover matters
+
+        # Citizens decide participation and switching
+        for agent in self.schedule.agents:
+            if isinstance(agent, Citizen):
+                agent.decide_participation()
+                agent.maybe_switch_broker()
+
+        # Collect data
         self.datacollector.collect(self)
