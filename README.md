@@ -1,107 +1,120 @@
-# Trust Dynamics in Collaborative Governance: An ABM Study
+# Trust Collapse Under Negative Spillover  
+### An Agent-Based Model of Collaborative Governance in China's Personal Pension System
 
-This repository contains the source code and data for the paper:
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
+[![Reproducible](https://img.shields.io/badge/reproducible-100%25-brightgreen)]()
 
-> **"Trust Collapse Under Negative Spillover: An Agent-Based Model of Collaborative Governance with Implications for China's Personal Pension System"**
+This repository contains the source code, experimental data, and visualization scripts for the paper:  
+**"Trust Collapse Under Negative Spillover: An Agent-Based Model of Collaborative Governance with Implications for China's Personal Pension System"**
 
-Submitted to *Journal of Artificial Societies and Social Simulation (JASSS)*.
+> **Core Finding**: Even minimal negative spillover (≥15%) triggers total system collapse—participation drops to 0% regardless of initial trust.
+
+---
 
 ## 📌 Overview
-We investigate how negative spillover effects—where localized trust breaches propagate across a network—undermine cooperation in a broker-mediated governance system inspired by China’s personal pension framework. Using agent-based modeling (ABM), we show that negative spillover drives final trust to zero regardless of initial trust levels (p < 0.001).
+
+We model a broker-mediated personal pension system inspired by China’s Pillar III framework, where citizens voluntarily contribute based on institutional trust. Using agent-based modeling (ABM), we demonstrate that **localized trust breaches can propagate via negative spillover**, leading to systemic non-participation.
+
+The model follows the **ODD protocol (Overview, Design concepts, Details)** and includes:
+- Heterogeneous citizen agents with dynamic trust updating
+- Broker agents subject to stochastic scandals
+- A global spillover mechanism that updates trust across the entire population
+- Endogenous participation decisions (contribute or withdraw)
+
+---
+
+## 🔬 Key Results
+
+| Condition                | Final Trust | Participation Rate |
+|--------------------------|-------------|--------------------|
+| No spillover (`β = 0.0`) | = Initial   | 100%               |
+| Partial/Full spillover (`β ≥ 0.5`) | 0.0         | 0%                 |
+
+- **Critical threshold**: System collapses when spillover intensity **exceeds ~0.15**
+- **Initial trust is irrelevant**: High initial trust (0.9) cannot prevent collapse under spillover
+- **Early warning**: Trust declines before participation—enabling detection of "zombie contributors"
+
+> These results highlight the **structural fragility** of voluntary pension systems.
+
+---
 
 ## 📂 Repository Structure
-├── agents.py # Stakeholder agent definition
-├── model.py # Main model logic (CollaborativeGovernanceModel)
-├── run_experiments.py # Full factorial experiment (180 runs)
-├── stat_test.py # Statistical analysis and visualization
-├── experiment_all_runs.csv # Raw results from 180 simulation runs
-├── boxplot_trust.png # Final trust distribution by condition
-├── trust_analysis.png # Initial vs. final trust scatter plot
-└── requirements.txt # Python dependencies
 
+├── agents.py # Citizen & Broker agent definitions
+├── model.py # Main model: PensionTrustModel
+├── run_extended_experiment.py # Full factorial experiment (270 runs)
+├── plot_results.py # Generates publication-ready figures
+├── extended_experiment_all_runs.csv # Raw experimental data (270 rows)
+├── figures/ # Output plots (300 DPI PNG)
+│ ├── fig1_participation_boxplot.png
+│ ├── fig2_participation_heatmap.png
+│ └── fig3_trust_vs_participation.png; fig4
+├── requirements.txt # Python dependencies
+└── README.md # This file
+
+---
 
 ## ▶️ How to Reproduce
 
 ### Prerequisites
-- Python 3.8+
-- Conda (recommended)
+- Python ≥ 3.8
+- Git
 
 ### Steps
-1. Clone this repository:
+
+1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/trust_abm.git
    cd trust_abm
 
-2.Create and activate conda environment:
-conda env create -f environment.yml
-conda activate abm_trust
+
+
+2.Install dependencies
+pip install -r requirements.txt
 
 3.Run the full experiment (takes ~2 minutes):
-python run_experiments.py
+python run_extended_experiment.py
+→ Outputs: data/extended_experiment_all_runs.csv
 
-4.Perform statistical analysis and generate figures:
-python stat_test.py
+4.generate figures:
+python plot_results.py
+→ Outputs: figures/*.png
 
-You should see:
-experiment_all_runs.csv generated
-boxplot_trust.png and trust_analysis.png saved
-📊 Key Results
-Without negative spillover: Mean final trust = 0.133
-With negative spillover: Mean final trust = 0.000
-Statistical significance: p < 0.001 for both groups (t-test, n=90 per group)
+All results are deterministic and reproducible with the provided seed.
+
+🖼️ Sample Figures
+
+Participation by Spillover	Trust × Spillover Heatmap
+Left: Participation rate collapses completely under any spillover.
+Right: Vertical boundary confirms initial trust cannot offset spillover risk.
+
+📘 Model Specification (ODD Protocol)
+Purpose: Simulate how negative spillovers undermine cooperation in a pension governance system.
+Entities:
+Citizens: Update trust via Bayesian learning + social influence; decide to participate.
+Brokers: Generate returns; may suffer scandals (negative shocks).
+Process: Each step: (i) brokers realize outcomes, (ii) spillover updates global trust, (iii) citizens revise trust, (iv) citizens decide to contribute.
+Design Concepts: Emergence, Interaction, Stochasticity, Adaptation.
+Details: See model.py and paper appendix.
 📚 Citation
-If you use this work, please cite our paper (once published) and acknowledge the code:
-Author. (2025). Trust Collapse Under Negative Spillover... Journal of Artificial Societies and Social Simulation.
+If you use this model, please cite:
+@article{xu2026trust,
+  title={Trust Collapse Under Negative Spillover: An Agent-Based Model of Collaborative Governance with Implications for China's Personal Pension System},
+  author={Xu, J.},
+  journal={Journal of Artificial Societies and Social Simulation},
+  year={2026}
+}
 Code available at: https://github.com/yourusername/trust_abm
+
 
 📄 License
 MIT License. See LICENSE for details.
 🔗 Data DOI
 [![DOI](https://zenodo.org/badge/1155171850.svg)](https://doi.org/10.5281/zenodo.18605927)
-<<<<<<< HEAD
-(Will be updated after Zenodo deposit)
-=======
 
 
 
-5. **保存**（Ctrl + S），关闭。
 
----
 
-### 🔧 文件 2：创建 `requirements.txt`
 
-1. 右键 → 新建 → 文本文档
-2. 改名为：`requirements.txt`
-3. 右键编辑，粘贴：
 
-```txt
-mesa==2.2.4
-pandas>=1.5.0
-numpy>=1.21.0
-scipy>=1.9.0
-seaborn>=0.12.0
-matplotlib>=3.6.0
-
-This repository implements an agent-based model (ABM) of institutional trust in pension systems, with a focus on negative spillover effects. The model has been extended to support partial spillover intensity, revealing multi-regime dynamics in trust collapse.
-📘 Full model specification: See the ODD protocol (v2 – with partial spillover).
-📊 Key results: Three distinct regimes emerge based on spillover intensity:
-No spillover (spillover_fraction = 0.0) → high-trust equilibrium
-Partial spillover (spillover_fraction = 0.5) → near-total collapse
-Full spillover (spillover_fraction = 1.0) → complete system failure
-Crucially, long-term outcomes are independent of initial trust levels.
-
-🚀 How to Reproduce Results
-Install dependencies:
-
-pip install mesa pandas numpy seaborn matplotlib
-Run the extended experiment (270 simulations):
-
-python run_extended_experiment.py
-Output: extended_experiment_all_runs.csv
-Generate figures:
-
-python plot_extended_results.py
-Outputs:
-fig1_extended_trust_boxplot.png
-fig2_phase_transition.png
-fig3_trust_heatmap.png
