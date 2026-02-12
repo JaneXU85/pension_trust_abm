@@ -1,271 +1,271 @@
-replication_id,initial_trust,spillover_enabled,spillover_fraction,spillover_label,final_trust,final_cooperation
-1,0.3,False,0.0,No Spillover,0.3,0.31
-2,0.3,False,0.0,No Spillover,0.3,0.23
-3,0.3,False,0.0,No Spillover,0.3,0.32
-4,0.3,False,0.0,No Spillover,0.3,0.32
-5,0.3,False,0.0,No Spillover,0.3,0.25
-6,0.3,False,0.0,No Spillover,0.3,0.26
-7,0.3,False,0.0,No Spillover,0.3,0.37
-8,0.3,False,0.0,No Spillover,0.3,0.25
-9,0.3,False,0.0,No Spillover,0.3,0.24
-10,0.3,False,0.0,No Spillover,0.3,0.33
-11,0.3,False,0.0,No Spillover,0.3,0.31
-12,0.3,False,0.0,No Spillover,0.3,0.24
-13,0.3,False,0.0,No Spillover,0.3,0.33
-14,0.3,False,0.0,No Spillover,0.3,0.24
-15,0.3,False,0.0,No Spillover,0.3,0.34
-16,0.3,False,0.0,No Spillover,0.3,0.3
-17,0.3,False,0.0,No Spillover,0.3,0.28
-18,0.3,False,0.0,No Spillover,0.3,0.28
-19,0.3,False,0.0,No Spillover,0.3,0.28
-20,0.3,False,0.0,No Spillover,0.3,0.2
-21,0.3,False,0.0,No Spillover,0.3,0.29
-22,0.3,False,0.0,No Spillover,0.3,0.36
-23,0.3,False,0.0,No Spillover,0.3,0.32
-24,0.3,False,0.0,No Spillover,0.3,0.35
-25,0.3,False,0.0,No Spillover,0.3,0.29
-26,0.3,False,0.0,No Spillover,0.3,0.31
-27,0.3,False,0.0,No Spillover,0.3,0.29
-28,0.3,False,0.0,No Spillover,0.3,0.3
-29,0.3,False,0.0,No Spillover,0.3,0.3
-30,0.3,False,0.0,No Spillover,0.3,0.26
-31,0.3,True,0.5,Partial Spillover,0.0,0.0
-32,0.3,True,0.5,Partial Spillover,0.0,0.0
-33,0.3,True,0.5,Partial Spillover,0.0,0.0
-34,0.3,True,0.5,Partial Spillover,0.0,0.0
-35,0.3,True,0.5,Partial Spillover,0.003,0.0
-36,0.3,True,0.5,Partial Spillover,0.0,0.0
-37,0.3,True,0.5,Partial Spillover,0.0,0.0
-38,0.3,True,0.5,Partial Spillover,0.003,0.0
-39,0.3,True,0.5,Partial Spillover,0.003,0.0
-40,0.3,True,0.5,Partial Spillover,0.003,0.01
-41,0.3,True,0.5,Partial Spillover,0.0,0.0
-42,0.3,True,0.5,Partial Spillover,0.0,0.0
-43,0.3,True,0.5,Partial Spillover,0.003,0.0
-44,0.3,True,0.5,Partial Spillover,0.0,0.0
-45,0.3,True,0.5,Partial Spillover,0.003,0.0
-46,0.3,True,0.5,Partial Spillover,0.0,0.0
-47,0.3,True,0.5,Partial Spillover,0.0,0.0
-48,0.3,True,0.5,Partial Spillover,0.003,0.0
-49,0.3,True,0.5,Partial Spillover,0.0,0.0
-50,0.3,True,0.5,Partial Spillover,0.003,0.0
-51,0.3,True,0.5,Partial Spillover,0.0,0.0
-52,0.3,True,0.5,Partial Spillover,0.0,0.0
-53,0.3,True,0.5,Partial Spillover,0.0,0.0
-54,0.3,True,0.5,Partial Spillover,0.0,0.0
-55,0.3,True,0.5,Partial Spillover,0.003,0.0
-56,0.3,True,0.5,Partial Spillover,0.009,0.02
-57,0.3,True,0.5,Partial Spillover,0.003,0.01
-58,0.3,True,0.5,Partial Spillover,0.0,0.0
-59,0.3,True,0.5,Partial Spillover,0.0,0.0
-60,0.3,True,0.5,Partial Spillover,0.003,0.0
-61,0.3,True,1.0,Full Spillover,0.0,0.0
-62,0.3,True,1.0,Full Spillover,0.0,0.0
-63,0.3,True,1.0,Full Spillover,0.0,0.0
-64,0.3,True,1.0,Full Spillover,0.0,0.0
-65,0.3,True,1.0,Full Spillover,0.0,0.0
-66,0.3,True,1.0,Full Spillover,0.0,0.0
-67,0.3,True,1.0,Full Spillover,0.0,0.0
-68,0.3,True,1.0,Full Spillover,0.0,0.0
-69,0.3,True,1.0,Full Spillover,0.0,0.0
-70,0.3,True,1.0,Full Spillover,0.0,0.0
-71,0.3,True,1.0,Full Spillover,0.0,0.0
-72,0.3,True,1.0,Full Spillover,0.0,0.0
-73,0.3,True,1.0,Full Spillover,0.0,0.0
-74,0.3,True,1.0,Full Spillover,0.0,0.0
-75,0.3,True,1.0,Full Spillover,0.0,0.0
-76,0.3,True,1.0,Full Spillover,0.0,0.0
-77,0.3,True,1.0,Full Spillover,0.0,0.0
-78,0.3,True,1.0,Full Spillover,0.0,0.0
-79,0.3,True,1.0,Full Spillover,0.0,0.0
-80,0.3,True,1.0,Full Spillover,0.0,0.0
-81,0.3,True,1.0,Full Spillover,0.0,0.0
-82,0.3,True,1.0,Full Spillover,0.0,0.0
-83,0.3,True,1.0,Full Spillover,0.0,0.0
-84,0.3,True,1.0,Full Spillover,0.0,0.0
-85,0.3,True,1.0,Full Spillover,0.0,0.0
-86,0.3,True,1.0,Full Spillover,0.0,0.0
-87,0.3,True,1.0,Full Spillover,0.0,0.0
-88,0.3,True,1.0,Full Spillover,0.0,0.0
-89,0.3,True,1.0,Full Spillover,0.0,0.0
-90,0.3,True,1.0,Full Spillover,0.0,0.0
-91,0.6,False,0.0,No Spillover,0.6,0.6
-92,0.6,False,0.0,No Spillover,0.6,0.62
-93,0.6,False,0.0,No Spillover,0.6,0.6
-94,0.6,False,0.0,No Spillover,0.6,0.54
-95,0.6,False,0.0,No Spillover,0.6,0.61
-96,0.6,False,0.0,No Spillover,0.6,0.59
-97,0.6,False,0.0,No Spillover,0.6,0.7
-98,0.6,False,0.0,No Spillover,0.6,0.6
-99,0.6,False,0.0,No Spillover,0.6,0.55
-100,0.6,False,0.0,No Spillover,0.6,0.58
-101,0.6,False,0.0,No Spillover,0.6,0.66
-102,0.6,False,0.0,No Spillover,0.6,0.55
-103,0.6,False,0.0,No Spillover,0.6,0.63
-104,0.6,False,0.0,No Spillover,0.6,0.68
-105,0.6,False,0.0,No Spillover,0.6,0.55
-106,0.6,False,0.0,No Spillover,0.6,0.54
-107,0.6,False,0.0,No Spillover,0.6,0.58
-108,0.6,False,0.0,No Spillover,0.6,0.67
-109,0.6,False,0.0,No Spillover,0.6,0.59
-110,0.6,False,0.0,No Spillover,0.6,0.59
-111,0.6,False,0.0,No Spillover,0.6,0.55
-112,0.6,False,0.0,No Spillover,0.6,0.51
-113,0.6,False,0.0,No Spillover,0.6,0.62
-114,0.6,False,0.0,No Spillover,0.6,0.65
-115,0.6,False,0.0,No Spillover,0.6,0.61
-116,0.6,False,0.0,No Spillover,0.6,0.59
-117,0.6,False,0.0,No Spillover,0.6,0.59
-118,0.6,False,0.0,No Spillover,0.6,0.58
-119,0.6,False,0.0,No Spillover,0.6,0.63
-120,0.6,False,0.0,No Spillover,0.6,0.61
-121,0.6,True,0.5,Partial Spillover,0.0,0.0
-122,0.6,True,0.5,Partial Spillover,0.0,0.0
-123,0.6,True,0.5,Partial Spillover,0.006,0.01
-124,0.6,True,0.5,Partial Spillover,0.0,0.0
-125,0.6,True,0.5,Partial Spillover,0.0,0.0
-126,0.6,True,0.5,Partial Spillover,0.006,0.01
-127,0.6,True,0.5,Partial Spillover,0.0,0.0
-128,0.6,True,0.5,Partial Spillover,0.006,0.0
-129,0.6,True,0.5,Partial Spillover,0.0,0.0
-130,0.6,True,0.5,Partial Spillover,0.006,0.0
-131,0.6,True,0.5,Partial Spillover,0.0,0.0
-132,0.6,True,0.5,Partial Spillover,0.0,0.0
-133,0.6,True,0.5,Partial Spillover,0.006,0.01
-134,0.6,True,0.5,Partial Spillover,0.0,0.0
-135,0.6,True,0.5,Partial Spillover,0.006,0.0
-136,0.6,True,0.5,Partial Spillover,0.0,0.0
-137,0.6,True,0.5,Partial Spillover,0.0,0.0
-138,0.6,True,0.5,Partial Spillover,0.0,0.0
-139,0.6,True,0.5,Partial Spillover,0.0,0.0
-140,0.6,True,0.5,Partial Spillover,0.012,0.01
-141,0.6,True,0.5,Partial Spillover,0.0,0.0
-142,0.6,True,0.5,Partial Spillover,0.0,0.0
-143,0.6,True,0.5,Partial Spillover,0.0,0.0
-144,0.6,True,0.5,Partial Spillover,0.006,0.0
-145,0.6,True,0.5,Partial Spillover,0.0,0.0
-146,0.6,True,0.5,Partial Spillover,0.0,0.0
-147,0.6,True,0.5,Partial Spillover,0.0,0.0
-148,0.6,True,0.5,Partial Spillover,0.0,0.0
-149,0.6,True,0.5,Partial Spillover,0.0,0.0
-150,0.6,True,0.5,Partial Spillover,0.0,0.01
-151,0.6,True,1.0,Full Spillover,0.0,0.0
-152,0.6,True,1.0,Full Spillover,0.0,0.0
-153,0.6,True,1.0,Full Spillover,0.0,0.0
-154,0.6,True,1.0,Full Spillover,0.0,0.0
-155,0.6,True,1.0,Full Spillover,0.0,0.0
-156,0.6,True,1.0,Full Spillover,0.0,0.0
-157,0.6,True,1.0,Full Spillover,0.0,0.0
-158,0.6,True,1.0,Full Spillover,0.0,0.0
-159,0.6,True,1.0,Full Spillover,0.0,0.0
-160,0.6,True,1.0,Full Spillover,0.0,0.0
-161,0.6,True,1.0,Full Spillover,0.0,0.0
-162,0.6,True,1.0,Full Spillover,0.0,0.0
-163,0.6,True,1.0,Full Spillover,0.0,0.0
-164,0.6,True,1.0,Full Spillover,0.0,0.0
-165,0.6,True,1.0,Full Spillover,0.0,0.0
-166,0.6,True,1.0,Full Spillover,0.0,0.0
-167,0.6,True,1.0,Full Spillover,0.0,0.0
-168,0.6,True,1.0,Full Spillover,0.0,0.0
-169,0.6,True,1.0,Full Spillover,0.0,0.0
-170,0.6,True,1.0,Full Spillover,0.0,0.0
-171,0.6,True,1.0,Full Spillover,0.0,0.0
-172,0.6,True,1.0,Full Spillover,0.0,0.0
-173,0.6,True,1.0,Full Spillover,0.0,0.0
-174,0.6,True,1.0,Full Spillover,0.0,0.0
-175,0.6,True,1.0,Full Spillover,0.0,0.0
-176,0.6,True,1.0,Full Spillover,0.0,0.0
-177,0.6,True,1.0,Full Spillover,0.0,0.0
-178,0.6,True,1.0,Full Spillover,0.0,0.0
-179,0.6,True,1.0,Full Spillover,0.0,0.0
-180,0.6,True,1.0,Full Spillover,0.0,0.0
-181,0.9,False,0.0,No Spillover,0.9000000000000005,0.93
-182,0.9,False,0.0,No Spillover,0.9000000000000005,0.9
-183,0.9,False,0.0,No Spillover,0.9000000000000005,0.89
-184,0.9,False,0.0,No Spillover,0.9000000000000005,0.89
-185,0.9,False,0.0,No Spillover,0.9000000000000005,0.87
-186,0.9,False,0.0,No Spillover,0.9000000000000005,0.94
-187,0.9,False,0.0,No Spillover,0.9000000000000005,0.95
-188,0.9,False,0.0,No Spillover,0.9000000000000005,0.88
-189,0.9,False,0.0,No Spillover,0.9000000000000005,0.88
-190,0.9,False,0.0,No Spillover,0.9000000000000005,0.91
-191,0.9,False,0.0,No Spillover,0.9000000000000005,0.91
-192,0.9,False,0.0,No Spillover,0.9000000000000005,0.88
-193,0.9,False,0.0,No Spillover,0.9000000000000005,0.92
-194,0.9,False,0.0,No Spillover,0.9000000000000005,0.86
-195,0.9,False,0.0,No Spillover,0.9000000000000005,0.94
-196,0.9,False,0.0,No Spillover,0.9000000000000005,0.92
-197,0.9,False,0.0,No Spillover,0.9000000000000005,0.85
-198,0.9,False,0.0,No Spillover,0.9000000000000005,0.86
-199,0.9,False,0.0,No Spillover,0.9000000000000005,0.9
-200,0.9,False,0.0,No Spillover,0.9000000000000005,0.9
-201,0.9,False,0.0,No Spillover,0.9000000000000005,0.89
-202,0.9,False,0.0,No Spillover,0.9000000000000005,0.85
-203,0.9,False,0.0,No Spillover,0.9000000000000005,0.92
-204,0.9,False,0.0,No Spillover,0.9000000000000005,0.9
-205,0.9,False,0.0,No Spillover,0.9000000000000005,0.87
-206,0.9,False,0.0,No Spillover,0.9000000000000005,0.92
-207,0.9,False,0.0,No Spillover,0.9000000000000005,0.93
-208,0.9,False,0.0,No Spillover,0.9000000000000005,0.9
-209,0.9,False,0.0,No Spillover,0.9000000000000005,0.92
-210,0.9,False,0.0,No Spillover,0.9000000000000005,0.87
-211,0.9,True,0.5,Partial Spillover,0.0,0.0
-212,0.9,True,0.5,Partial Spillover,0.018000000000000002,0.01
-213,0.9,True,0.5,Partial Spillover,0.0,0.0
-214,0.9,True,0.5,Partial Spillover,0.0,0.0
-215,0.9,True,0.5,Partial Spillover,0.0,0.0
-216,0.9,True,0.5,Partial Spillover,0.0,0.0
-217,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-218,0.9,True,0.5,Partial Spillover,0.0,0.0
-219,0.9,True,0.5,Partial Spillover,0.0,0.0
-220,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-221,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.02
-222,0.9,True,0.5,Partial Spillover,0.0,0.0
-223,0.9,True,0.5,Partial Spillover,0.0,0.0
-224,0.9,True,0.5,Partial Spillover,0.0,0.0
-225,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.0
-226,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-227,0.9,True,0.5,Partial Spillover,0.0,0.0
-228,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-229,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-230,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-231,0.9,True,0.5,Partial Spillover,0.018000000000000002,0.02
-232,0.9,True,0.5,Partial Spillover,0.0,0.0
-233,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-234,0.9,True,0.5,Partial Spillover,0.0,0.0
-235,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-236,0.9,True,0.5,Partial Spillover,0.0,0.0
-237,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-238,0.9,True,0.5,Partial Spillover,0.0,0.0
-239,0.9,True,0.5,Partial Spillover,0.0,0.0
-240,0.9,True,0.5,Partial Spillover,0.009000000000000001,0.01
-241,0.9,True,1.0,Full Spillover,0.0,0.0
-242,0.9,True,1.0,Full Spillover,0.0,0.0
-243,0.9,True,1.0,Full Spillover,0.0,0.0
-244,0.9,True,1.0,Full Spillover,0.0,0.0
-245,0.9,True,1.0,Full Spillover,0.0,0.0
-246,0.9,True,1.0,Full Spillover,0.0,0.0
-247,0.9,True,1.0,Full Spillover,0.0,0.0
-248,0.9,True,1.0,Full Spillover,0.0,0.0
-249,0.9,True,1.0,Full Spillover,0.0,0.0
-250,0.9,True,1.0,Full Spillover,0.0,0.0
-251,0.9,True,1.0,Full Spillover,0.0,0.0
-252,0.9,True,1.0,Full Spillover,0.0,0.0
-253,0.9,True,1.0,Full Spillover,0.0,0.0
-254,0.9,True,1.0,Full Spillover,0.0,0.0
-255,0.9,True,1.0,Full Spillover,0.0,0.0
-256,0.9,True,1.0,Full Spillover,0.0,0.0
-257,0.9,True,1.0,Full Spillover,0.0,0.0
-258,0.9,True,1.0,Full Spillover,0.0,0.0
-259,0.9,True,1.0,Full Spillover,0.0,0.0
-260,0.9,True,1.0,Full Spillover,0.0,0.0
-261,0.9,True,1.0,Full Spillover,0.0,0.0
-262,0.9,True,1.0,Full Spillover,0.0,0.0
-263,0.9,True,1.0,Full Spillover,0.0,0.0
-264,0.9,True,1.0,Full Spillover,0.0,0.0
-265,0.9,True,1.0,Full Spillover,0.0,0.0
-266,0.9,True,1.0,Full Spillover,0.0,0.0
-267,0.9,True,1.0,Full Spillover,0.0,0.0
-268,0.9,True,1.0,Full Spillover,0.0,0.0
-269,0.9,True,1.0,Full Spillover,0.0,0.0
-270,0.9,True,1.0,Full Spillover,0.0,0.0
+spillover_fraction,initial_trust,final_trust,participation_rate
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.3,0.3,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.6,0.6,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.0,0.9,0.9000000000000005,1.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.3,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.6,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+0.5,0.9,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.3,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.6,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
+1.0,0.9,0.0,0.0
